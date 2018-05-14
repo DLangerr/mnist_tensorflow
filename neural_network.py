@@ -106,7 +106,8 @@ class Neural_Network(object):
 				for file, image in self.images.items():
 					self.predictions = sess.run(self.pred, feed_dict={self.phX:image})
 					self.message = f"Prediction for {file}: {self.predictions}."
-			
+					
+					print(self.message)
 					f.write(self.message)
 					f.write("\n")
 				f.write("\n\n")
