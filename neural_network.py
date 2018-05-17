@@ -36,7 +36,7 @@ class Neural_Network(object):
 		self.Z2 = tf.nn.tanh(tf.matmul(self.Z1, self.W2) + self.b2)
 		return tf.matmul(self.Z2, self.W3) + self.b3
 
-	def train(self, epochs=200, lr=0.09, show_fig=False):
+	def train(self, epochs=200, lr=0.01, show_fig=False):
 
 		X, Y, Y_one_hot = preprocess_data()
 
